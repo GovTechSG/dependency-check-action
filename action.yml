@@ -3,16 +3,16 @@ description: Runs OWASP dependencycheck against the repo to generate a report on
 inputs:
     Project-Name:
         required: false
-        default: '$GITHUB_REPOSITORY'
+        default: ${GITHUB_REPOSITORY}
     Source-Location:
         required: false
-        default: '/github/workspace'
+        default: ${GITHUB_WORKSPACE}
     Report-Format:
         required: false
         default: 'ALL'
     Report-Location:
         required: false
-        default: '/github/workspace/reports'
+        default: '${GITHUB_WORKSPACE}/reports'
     Log-Name:
         required: false
         default: log.txt
