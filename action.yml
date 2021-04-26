@@ -3,7 +3,7 @@ description: Runs OWASP dependencycheck against the repo to generate a report on
 inputs:
     Project-Name:
         required: false
-        default: '${{ GITHUB_REPOSITORY }}'
+        default: '$GITHUB_REPOSITORY'
     Source-Location:
         required: false
         default: '/github/workspace'
