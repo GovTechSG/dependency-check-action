@@ -2,17 +2,16 @@ name: Dependency Check
 description: Runs OWASP dependencycheck against the repo to generate a report on vulnerabilities"
 inputs:
     Project-Name:
-        required: false
-        default: ${GITHUB_REPOSITORY}
+        required: true
     Source-Location:
         required: false
-        default: ${GITHUB_WORKSPACE}
+        default: '/github/workspace'
     Report-Format:
         required: false
         default: 'ALL'
     Report-Location:
         required: false
-        default: '${GITHUB_WORKSPACE}/reports'
+        default: '/github/workspace/reports'
     Log-Name:
         required: false
         default: log.txt
