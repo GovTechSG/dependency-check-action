@@ -1,0 +1,9 @@
+.dependency_check
+  image:
+    name: public.ecr.aws/govtechsg/cicd-images:dependency-check-latest
+    entrypoint: [""]
+  artifacts:
+    paths:
+      - reports
+  script:
+    - /usr/share/dependency-check/bin/dependency-check.sh --scan ./ --format ${OUTPUT_FORMAT:-ALL} --project ${CI_PROJECT_PATH} --out ./reports --log ./reports/log.txt
