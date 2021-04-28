@@ -6,4 +6,4 @@
     paths:
       - ./reports/
   script:
-    - /usr/share/dependency-check/bin/dependency-check.sh --scan ./ --format ${OUTPUT_FORMAT:-ALL} --project ${CI_PROJECT_PATH} --out ./reports --log ./reports/log.txt
+    - /usr/share/dependency-check/bin/dependency-check.sh --scan ./ --format ${OUTPUT_FORMAT:-ALL} --project ${CI_PROJECT_PATH} --out ./reports
