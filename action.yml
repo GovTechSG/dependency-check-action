@@ -12,9 +12,6 @@ inputs:
     Report-Location:
         required: false
         default: '/github/workspace/reports'
-    Log-Name:
-        required: false
-        default: log.txt
 runs:
     using: 'docker'
     image: docker://public.ecr.aws/govtechsg/cicd-images:dependency-check-latest
@@ -27,5 +24,3 @@ runs:
         - '${{ inputs.Project-Name }}'
         - '--out'
         - '${{ inputs.Report-Location }}'
-        - '--log'
-        - '${{ inputs.Report-Location }}/${{ inputs.Log-Name }}'
