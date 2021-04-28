@@ -22,3 +22,5 @@ runs:
         - '${{ inputs.Report-Format }}'
         - '--project'
         - '${{ inputs.Project-Name }}'
+        - '--out'
+        - '${{ inputs.Report-Location }}'
